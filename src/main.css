@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, #ffffff 100px, #f0f0f0);
+}
+
+.logo::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./bg.jpg");
+    z-index: -1;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+}
+
+.logo-image {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
