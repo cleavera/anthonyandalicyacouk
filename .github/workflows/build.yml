@@ -24,6 +24,6 @@ jobs:
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: Artifact-${{GITHUB_REF##*/}}
+        name: Artifact-${GITHUB_REF}
         path: |
           dist
