@@ -1,0 +1,30 @@
+:host {
+  align-items: center;
+  background: var(--color-card);
+  display: flex;
+  padding: 20px 0;
+
+  &::before {
+    content: '';
+    flex: 1 0 0;
+  }
+}
+
+.title {
+  color: var(--color-font-title);
+  font-family: var(--fontFamily-title);
+  flex: 0 0 auto;
+  margin: 0 20px;
+  order: -1;
+}
+
+.line {
+  flex: 0 0 150px;
+  margin: 0;
+  order: -1;
+}
+
+.nav {
+  order: 1;
+}
+

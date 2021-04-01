@@ -1,18 +1,35 @@
 {
   "name": "anthony-and-alicya-co-uk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
   "scripts": {
-    "build": "npm run clean && npm run compile",
-    "clean": "npx del-cli ./dist",
-    "compile": "npx copyfiles ./src/**/*.* ./dist -u=1",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ng": "ng",
+    "start": "ng serve",
+    "compile": "ng build",
+    "build": "npm run lint && npm run test && npm run compile",
+    "test": "ng test",
+    "lint": "ng lint"
   },
-  "author": "Anthony Cleaver",
-  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~11.0.3",
+    "@angular/common": "~11.0.3",
+    "@angular/compiler": "~11.0.3",
+    "@angular/core": "~11.0.3",
+    "@angular/forms": "~11.0.3",
+    "@angular/platform-browser": "~11.0.3",
+    "@angular/platform-browser-dynamic": "~11.0.3",
+    "@angular/router": "~11.0.3",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.2"
+  },
   "devDependencies": {
-    "copyfiles": "^2.4.1",
-    "del-cli": "^3.0.1"
+    "@angular-devkit/build-angular": "~0.1100.3",
+    "@angular/cli": "~11.0.3",
+    "@angular/compiler-cli": "~11.0.3",
+    "@types/node": "^12.11.1",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.0.2"
   }
 }

@@ -1,0 +1,43 @@
+:root {
+  --fontFamily-body: Poppins, sans-serif;
+  --fontFamily-title: 'Clicker Script', cursive;
+
+  --fontSize-body: 1rem;
+
+  --color-burgundy: #5e1727;
+  --color-duskyPink: #ca8e99;
+  --color-mintGreen: #adb8ae;
+  --color-white: #ffffff;
+  --color-whiteIvory: #f0f0f0;
+
+  --color-background: var(--color-whiteIvory);
+  --color-card: var(--color-white);
+  --color-dividers: var(--color-mintGreen);
+  --color-font-title: var(--color-burgundy);
+  --color-link: var(--color-burgundy);
+  --color-link--hover: var(--color-duskyPink);
+
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--fontFamily-body);
+  font-size: var(--fontSize-body);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  border-bottom: 1px solid;
+  color: var(--color-link);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-link--hover);
+  }
+}

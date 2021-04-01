@@ -1,0 +1,19 @@
+.links {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin: 0 50px;
+  padding: 0;
+}
+
+.link {
+  font-size: 1.2rem;
+
+  & + & {
+    &::before {
+      content: '•';
+      color: var(--color-dividers);
+      margin: 0 20px;
+    }
+  }
+}

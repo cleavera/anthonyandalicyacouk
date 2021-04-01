@@ -1,0 +1,438 @@
+@keyframes grow {
+  0% {
+    stroke-dashArray: var(--stroke-length);
+    stroke-dashOffset: var(--stroke-length);
+  }
+
+  100% {
+    stroke-dashArray: var(--stroke-length);
+    stroke-dashOffset: 0;
+  }
+}
+
+:host {
+  --aaLine-animation-length: 5s;
+}
+
+path {
+  fill: none;
+  stroke: var(--aaLine-color, var(--color-dividers));
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation: grow calc(var(--aaLine-animation-length) * var(--length-factor, 0.5)) both linear calc(var(--aaLine-animation-length) * var(--delay, 0.05));
+}
+
+.stem {
+  --stroke-length: 325;
+  animation: grow var(--aaLine-animation-length) linear;
+}
+
+.leaf1 {
+  --stroke-length: 80;
+  --length-factor: 0.3;
+  --delay: 0.05;
+}
+
+.leaf2 {
+  --stroke-length: 65;
+  --length-factor: 0.2;
+  --delay: 0.08;
+}
+
+.leaf3 {
+  --stroke-length: 65;
+  --length-factor: 0.3;
+  --delay: 0.12;
+}
+
+.leaf4 {
+  --stroke-length: 50;
+  --length-factor: 0.4;
+  --delay: 0.15;
+}
+
+.leaf5 {
+  --stroke-length: 70;
+  --length-factor: 0.1;
+  --delay: 0.2;
+}
+
+.leaf6 {
+  --stroke-length: 65;
+  --length-factor: 0.35;
+  --delay: 0.21;
+}
+
+.leaf7 {
+  --stroke-length: 70;
+  --length-factor: 0.2;
+  --delay: 0.25;
+}
+
+.leaf8 {
+  --stroke-length: 60;
+  --length-factor: 0.25;
+  --delay: 0.24;
+}
+
+.branch1 {
+  --stroke-length: 70;
+  --length-factor: 0.35;
+  --delay: 0.24;
+}
+
+.branch1-leaf1 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.37;
+}
+
+.branch1-leaf2 {
+  --stroke-length: 25;
+  --length-factor: 0.09;
+  --delay: 0.39;
+}
+
+.branch1-leaf3 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.43;
+}
+
+.branch1-leaf4 {
+  --stroke-length: 25;
+  --length-factor: 0.09;
+  --delay: 0.45;
+}
+
+.branch1-leaf5 {
+  --stroke-length: 25;
+  --length-factor: 0.1;
+  --delay: 0.5;
+}
+
+.branch1-leaf6 {
+  --stroke-length: 25;
+  --length-factor: 0.09;
+  --delay: 0.52;
+}
+
+.branch5 {
+  --stroke-length: 50;
+  --length-factor: 0.3;
+  --delay: 0.45;
+}
+
+.branch5-flower {
+  --stroke-length: 100;
+  --length-factor: 0.15;
+  --delay: 0.68;
+}
+
+.branch2 {
+  --stroke-length: 50;
+  --length-factor: 0.2;
+  --delay: 0.52;
+}
+
+.branch2-flower {
+  --stroke-length: 145;
+  --length-factor: 0.14;
+  --delay: 0.7;
+}
+
+.branch3 {
+  --stroke-length: 65;
+  --length-factor: 0.3;
+  --delay: 0.6;
+}
+
+.branch3-branch1 {
+  --stroke-length: 30;
+  --length-factor: 0.14;
+  --delay: 0.9;
+}
+
+.branch3-branch2 {
+  --stroke-length: 25;
+  --length-factor: 0.1;
+  --delay: 0.9;
+}
+
+.branch3-branch3 {
+  --stroke-length: 20;
+  --length-factor: 0.2;
+  --delay: 0.9;
+}
+
+.branch3-branch4 {
+  --stroke-length: 30;
+  --length-factor: 0.16;
+  --delay: 0.9;
+}
+
+.branch3-branch5 {
+  --stroke-length: 40;
+  --length-factor: 0.12;
+  --delay: 1;
+}
+
+.branch3-branch1-leaf1,
+.branch3-branch1-leaf2,
+.branch3-branch1-leaf3,
+.branch3-branch1-leaf4,
+.branch3-branch1-leaf5 {
+  --stroke-length: 10;
+  --length-factor: 0.08;
+  --delay: 1.04;
+}
+
+.branch3-branch2-leaf1,
+.branch3-branch2-leaf2,
+.branch3-branch2-leaf3,
+.branch3-branch2-leaf4,
+.branch3-branch2-leaf5 {
+  --stroke-length: 10;
+  --length-factor: 0.08;
+  --delay: 1;
+}
+
+.branch3-branch3-leaf1,
+.branch3-branch3-leaf2,
+.branch3-branch3-leaf3,
+.branch3-branch3-leaf4,
+.branch3-branch3-leaf5,
+.branch3-branch3-leaf6,
+.branch3-branch3-leaf7 {
+  --stroke-length: 10;
+  --length-factor: 0.08;
+  --delay: 1.1;
+}
+
+.branch3-branch4-leaf1,
+.branch3-branch4-leaf2,
+.branch3-branch4-leaf3,
+.branch3-branch4-leaf4,
+.branch3-branch4-leaf5,
+.branch3-branch4-leaf6,
+.branch3-branch4-leaf7 {
+  --stroke-length: 10;
+  --length-factor: 0.08;
+  --delay: 1.15;
+}
+
+.branch3-branch5-leaf1,
+.branch3-branch5-leaf2,
+.branch3-branch5-leaf3,
+.branch3-branch5-leaf4,
+.branch3-branch5-leaf5,
+.branch3-branch5-leaf6 {
+  --stroke-length: 10;
+  --length-factor: 0.08;
+  --delay: 1.2;
+}
+
+.branch6 {
+  --stroke-length: 45;
+  --length-factor: 0.25;
+  --delay: 0.65;
+}
+
+.branch6-flower {
+  --stroke-length: 120;
+  --length-factor: 0.15;
+  --delay: 0.9;
+}
+
+.branch7 {
+  --stroke-length: 70;
+  --length-factor: 0.2;
+  --delay: 0.72;
+}
+
+.branch7-leaf1 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.75;
+}
+
+.branch7-leaf7 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.76;
+}
+
+.branch7-leaf2 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.77;
+}
+
+.branch7-leaf8 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.78;
+}
+
+.branch7-leaf3 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.8;
+}
+
+.branch7-leaf9 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.79;
+}
+
+.branch7-leaf4 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.83;
+}
+
+.branch7-leaf10 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.81;
+}
+
+.branch7-leaf5 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.85;
+}
+
+.branch7-leaf11 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.88;
+}
+
+.branch7-leaf6 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.87;
+}
+
+.branch7-leaf12 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.9;
+}
+
+.branch4 {
+  --stroke-length: 60;
+  --length-factor: 0.3;
+  --delay: 0.8;
+}
+
+.branch4-leaf1 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.83;
+}
+
+.branch4-leaf2 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.84;
+}
+
+.branch4-leaf3 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.84;
+}
+
+.branch4-leaf4 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.85;
+}
+
+.branch4-leaf5 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.88;
+}
+
+.branch4-leaf6 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.88;
+}
+
+.branch4-leaf7 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.91;
+}
+
+.branch4-leaf8 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.90;
+}
+
+.branch4-leaf9 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.93;
+}
+
+.branch4-leaf10 {
+  --stroke-length: 20;
+  --length-factor: 0.1;
+  --delay: 0.95;
+}
+
+.leaf9 {
+  --stroke-length: 30;
+  --length-factor: 0.2;
+  --delay: 0.95;
+}
+
+.leaf10 {
+  --stroke-length: 30;
+  --length-factor: 0.15;
+  --delay: 0.98;
+}
+
+.leaf11 {
+  --stroke-length: 30;
+  --length-factor: 0.2;
+  --delay: 0.98;
+}
+
+.leaf12 {
+  --stroke-length: 30;
+  --length-factor: 0.1;
+  --delay: 1;
+}
+
+.leaf13 {
+  --stroke-length: 30;
+  --length-factor: 0.1;
+  --delay: 1.05;
+}
+
+.leaf14 {
+  --stroke-length: 30;
+  --length-factor: 0.1;
+  --delay: 1.1;
+}
+
+.floater-branch1,
+.floater-branch2,
+.floater-branch3,
+.floater-branch4,
+.floater-branch5,
+.floater-branch6,
+.floater-branch7,
+.floater-branch8 {
+  --stroke-length: 12;
+  --length-factor: 0.1;
+  --delay: 1.2;
+}
