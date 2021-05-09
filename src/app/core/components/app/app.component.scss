@@ -4,10 +4,11 @@
 
   --fontSize-body: 1rem;
 
+  --color-black: #000000;
   --color-burgundy: #5e1727;
   --color-duskyPink: #ca8e99;
   --color-mintGreen: #adb8ae;
-  --color-white: #ffffff;
+  --color-white: #fdfdfd;
   --color-whiteIvory: #f0f0f0;
 
   --color-background: var(--color-whiteIvory);
@@ -16,6 +17,9 @@
   --color-font-title: var(--color-burgundy);
   --color-link: var(--color-burgundy);
   --color-link--hover: var(--color-duskyPink);
+  --color-shadow: var(--color-burgundy);
+
+  --aaLine-animation-length: 2s;
 
   font-size: 100%;
 }

@@ -11,7 +11,9 @@
 }
 
 :host {
-  --aaLine-animation-length: 5s;
+  &.flipped {
+    transform: rotateZ(180deg) rotateX(180deg);
+  }
 }
 
 path {

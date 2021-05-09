@@ -1,30 +1,28 @@
 :host {
   align-items: center;
   background: var(--color-card);
+  box-shadow: 0 5px 10px var(--color-shadow);
   display: flex;
-  padding: 20px 0;
+  flex-direction: column;
+  padding: 50px 0 30px;
+}
 
-  &::before {
-    content: '';
-    flex: 1 0 0;
-  }
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .title {
   color: var(--color-font-title);
   font-family: var(--fontFamily-title);
+  font-size: 5rem;
   flex: 0 0 auto;
-  margin: 0 20px;
-  order: -1;
+  margin: 20px 20px 30px;
 }
 
 .line {
-  flex: 0 0 150px;
+  flex: 0 0 250px;
   margin: 0;
-  order: -1;
-}
-
-.nav {
-  order: 1;
 }
 
