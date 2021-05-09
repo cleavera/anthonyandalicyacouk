@@ -1,19 +1,71 @@
+:host {
+  &.isOpen {
+    .container {
+      @media (max-width: 650px) {
+        box-shadow: 0 5px 10px var(--color-shadow);
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
 .links {
-  align-items: center;
-  display: flex;
   list-style: none;
   margin: 0 50px;
-  padding: 0;
+  padding: 20px 0;
+
+  @media (min-width: 650px) {
+    align-items: center;
+    display: flex;
+    padding: 0;
+  }
 }
 
 .link {
   font-size: 1.2rem;
 
+  @media (max-width: 650px) {
+    margin: 10px 0;
+  }
+
   & + & {
     &::before {
-      content: '•';
-      color: var(--color-dividers);
-      margin: 0 20px;
+      @media (min-width: 650px) {
+        content: '•';
+        color: var(--color-dividers);
+        margin: 0 20px;
+      }
     }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  
+  @media (max-width: 650px) {
+    background: var(--color-card);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: transform 0.1s;
+  }
+}
+
+.close {
+  --closeIcon-color: var(--color-font-title);
+  background: transparent;
+  border: 0;
+  margin: 10px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+
+  @media (min-width: 650px) {
+    display: none;
   }
 }

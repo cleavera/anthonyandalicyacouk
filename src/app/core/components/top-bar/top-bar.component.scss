@@ -1,28 +1,74 @@
 :host {
-  align-items: center;
   background: var(--color-card);
   box-shadow: 0 5px 10px var(--color-shadow);
   display: flex;
-  flex-direction: column;
-  padding: 50px 0 30px;
+
+  @media screen and (min-width: 650px) {
+    flex-direction: column;
+    padding: 50px 0 30px;
+  }
 }
 
 .header {
   align-items: center;
   display: flex;
   justify-content: center;
+  margin: 0 20px;
+
+  @media screen and (max-width: 650px) {
+    flex: 1 0 auto;
+  }
 }
 
 .title {
   color: var(--color-font-title);
   font-family: var(--fontFamily-title);
-  font-size: 5rem;
+  font-size: 1rem;
   flex: 0 0 auto;
-  margin: 20px 20px 30px;
+  margin: 0 20px 0 0;
+
+  @media screen and (min-width: 450px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 550px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 650px) {
+    margin: 20px 20px 30px;
+  }
+
+  @media screen and (min-width: 850px) {
+    font-size: 5rem;
+  }
 }
 
 .line {
-  flex: 0 0 250px;
+  flex: 0 1 150px;
   margin: 0;
+
+  @media screen and (min-width: 450px) {
+    flex: 0 1 250px;
+    min-width: 150px;
+  }
+
+  &:first-of-type {
+    display: none;
+
+    @media screen and (min-width: 650px) {
+      display: block;
+    }
+  }
 }
 
+.toggle {
+  --hamburgerIcon-color: var(--color-font-title);
+  background: none;
+  border: 0;
+  width: 40px;
+
+  @media screen and (min-width: 650px) {
+    display: none;
+  }
+}

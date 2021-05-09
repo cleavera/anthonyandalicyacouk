@@ -3,4 +3,5 @@
     <h1 class="title">Anthony & Alicya</h1>
     <aa-line class="line"></aa-line>
 </div>
-<aa-navigation class="nav"></aa-navigation>
+<button class="toggle" (click)="toggleMenu()" aria-label="Open"><aa-hamburger-icon></aa-hamburger-icon></button>
+<aa-navigation class="nav" [isOpen]="openMenu" (close)="onClose()"></aa-navigation>
