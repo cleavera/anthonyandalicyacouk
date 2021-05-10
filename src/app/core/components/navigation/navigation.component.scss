@@ -40,9 +40,11 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  
+  @media (min-width: 650px) {
+    display: flex;
+    justify-content: center;
+  }
+
   @media (max-width: 650px) {
     background: var(--color-card);
     left: 0;
@@ -55,7 +57,7 @@
 }
 
 .close {
-  --closeIcon-color: var(--color-font-title);
+  --closeIcon-color: var(--color-link);
   background: transparent;
   border: 0;
   margin: 10px;
@@ -67,5 +69,16 @@
 
   @media (min-width: 650px) {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    --closeIcon-color: var(--color-link--hover);
+  }
+}
+
+.link-href {
+  @media (max-width: 650px) {
+    display: block;
   }
 }

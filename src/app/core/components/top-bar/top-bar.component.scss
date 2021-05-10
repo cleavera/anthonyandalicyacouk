@@ -2,6 +2,7 @@
   background: var(--color-card);
   box-shadow: 0 5px 10px var(--color-shadow);
   display: flex;
+  padding: 10px 0;
 
   @media screen and (min-width: 650px) {
     flex-direction: column;
@@ -15,7 +16,7 @@
   margin: 0 20px;
 
   @media screen and (max-width: 650px) {
-    flex: 1 0 auto;
+    flex: 0 1 100%;
   }
 
   @media screen and (min-width: 650px) {
@@ -66,7 +67,7 @@
 }
 
 .toggle {
-  --hamburgerIcon-color: var(--color-font-title);
+  --hamburgerIcon-color: var(--color-link);
   background: none;
   border: 0;
   width: 30px;
@@ -81,5 +82,10 @@
 
   @media screen and (min-width: 650px) {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    --hamburgerIcon-color: var(--color-link--hover);
   }
 }
