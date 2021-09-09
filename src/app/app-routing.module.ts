@@ -1,7 +1,16 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Type } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { CoreModule } from './core/core.module';
+
+const routes: Routes = [
+    {
+        path: '/',
+        loadChildren: (): Type<CoreModule> => {
+            return CoreModule;
+        }
+    }
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
