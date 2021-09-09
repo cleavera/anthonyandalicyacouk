@@ -9,6 +9,14 @@ const routes: Routes = [
         loadChildren: (): Type<CoreModule> => {
             return CoreModule;
         }
+    },
+    {
+        path: 'venue',
+        loadChildren: async(): Promise<Type<unknown>> => {
+            const { VenueModule } = await import('./venue/venue.module');
+
+            return VenueModule;
+        }
     }
 ];
 
