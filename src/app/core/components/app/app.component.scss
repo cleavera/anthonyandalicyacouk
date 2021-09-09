@@ -1,5 +1,7 @@
+/* stylelint-disable */
+
 :root {
-  --fontFamily-body: Poppins, sans-serif;
+  --fontFamily-body: poppins, sans-serif;
   --fontFamily-title: 'Clicker Script', cursive;
 
   --fontSize-body: 1rem;
@@ -49,3 +51,5 @@ a {
 button {
   cursor: pointer;
 }
+
+/* stylelint-enable */
