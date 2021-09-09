@@ -7,7 +7,7 @@
     "compile": "ng build",
     "build": "npm run lint && npm run test && npm run compile",
     "test": "exit 0",
-    "lint": "eslint src/**/*.ts && npx stylelint src/**/*.scss --config=\".stylelint.json\""
+    "lint": "npx eslint src/**/*.ts && npx stylelint src/**/*.scss --config=\".stylelint.json\""
   },
   "private": true,
   "dependencies": {
