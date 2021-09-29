@@ -17,6 +17,14 @@ const routes: Routes = [
 
             return CeremonyModule;
         }
+    },
+    {
+        path: 'reception',
+        loadChildren: async(): Promise<Type<unknown>> => {
+            const { ReceptionModule } = await import('./reception/reception.module');
+
+            return ReceptionModule;
+        }
     }
 ];
 
