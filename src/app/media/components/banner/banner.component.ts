@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostBinding, Input } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
 
 @Component({
     selector: 'aa-banner',
@@ -14,10 +14,9 @@ export class BannerComponent {
     @Input()
     public title!: string;
 
-    private _element: ElementRef;
+    private readonly _element: ElementRef;
 
     constructor(element: ElementRef) {
         this._element = element;
     }
-
 }
