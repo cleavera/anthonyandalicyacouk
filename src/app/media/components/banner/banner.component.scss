@@ -26,7 +26,7 @@
   }
 
   &::after {
-    background-image: url('assets/bg.jpg');
+    background-image: var(--aaBanner-overlayImage);
     bottom: 0;
     content: '';
     mix-blend-mode: soft-light;
