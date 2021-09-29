@@ -11,11 +11,11 @@ const routes: Routes = [
         }
     },
     {
-        path: 'venue',
+        path: 'ceremony',
         loadChildren: async(): Promise<Type<unknown>> => {
-            const { VenueModule } = await import('./venue/venue.module');
+            const { CeremonyModule } = await import('./ceremony/ceremony.module');
 
-            return VenueModule;
+            return CeremonyModule;
         }
     }
 ];

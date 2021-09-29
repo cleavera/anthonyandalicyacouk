@@ -1,0 +1,50 @@
+.container {
+  align-items: center;
+  background-image: var(--aaBanner-image);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 650px) {
+    height: 600px;
+  }
+
+  &::before {
+    background: var(--color-overlay);
+    bottom: 0;
+    content: '';
+    mix-blend-mode: hard-light;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &::after {
+    background-image: url("/assets/bg.jpg");
+    bottom: 0;
+    content: "";
+    mix-blend-mode: soft-light;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: cover;
+  }
+}
+
+.title {
+  color: var(--color-font-title--invert);
+  font-family: var(--fontFamily-title);
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: 650px) {
+    font-size: 4rem;
+  }
+}
