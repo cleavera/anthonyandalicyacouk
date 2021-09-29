@@ -26,9 +26,9 @@
   }
 
   &::after {
-    background-image: url("/assets/bg.jpg");
+    background-image: url('/assets/bg.jpg');
     bottom: 0;
-    content: "";
+    content: '';
     mix-blend-mode: soft-light;
     left: 0;
     position: absolute;

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 
 import { LayoutModule } from '../layout/layout.module';
 import { MediaModule } from '../media/media.module';
-import { CeremonyPageComponent } from './components/ceremony-page/ceremony-page.component';
 import { CeremonyRoutingModule } from './ceremony-routing.module';
+import { CeremonyPageComponent } from './components/ceremony-page/ceremony-page.component';
 
 @NgModule({
     exports: [],
