@@ -25,6 +25,14 @@ const routes: Routes = [
 
             return ReceptionModule;
         }
+    },
+    {
+        path: 'rsvp',
+        loadChildren: async(): Promise<Type<unknown>> => {
+            const { RsvpModule } = await import('./rsvp/rsvp.module');
+
+            return RsvpModule;
+        }
     }
 ];
 
