@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { APP_BASE_PATH } from '../../environments/environment';
 import { AppRoutingModule } from '../app-routing.module';
+import { LayoutModule } from '../layout/layout.module';
 import { MediaModule } from '../media/media.module';
 import { AppComponent } from './components/app/app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
@@ -27,6 +28,7 @@ import { CoreRoutingModule } from './core-routing.module';
         AppRoutingModule,
         BrowserModule,
         CoreRoutingModule,
+        LayoutModule,
         MediaModule
     ],
     providers: [
