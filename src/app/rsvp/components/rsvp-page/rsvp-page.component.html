@@ -1,25 +1,8 @@
 <aa-banner image="assets/rsvp.jpg" title="RSVP"></aa-banner>
 
 <aa-content>
-    <p>
-        RSVP is an initialism derived from the French phrase Répondez s'il vous plaît, meaning "Please respond" to
-        require confirmation of an invitation. The initialism "RSVP" is no longer used much in France, where it is
-        considered formal and a bit old-fashioned. In French, the complete sentence "Répondez s'il vous plaît" gives the
-        impression the speaker is begging for an answer. In France, it is now more common to use "Réponse attendue avant
-        le...", meaning "[Your] answer is expected before...". In addition, the French initialism "SVP" is frequently
-        used to represent "s'il vous plaît" ("please").
-    </p>
-    <p>
-        The phrase "RSVP, regrets only", - or simply "Regrets only", is a popular modern variation that implies "if you
-        do not reply, that will be taken as an acceptance." More specifically, if most invitations can be assumed to be
-        accepted, a "regrets only" RSVP will reduce the communication required by both the host and their guests. The
-        phrase "Regrets only" refers to the assumption that a declination will be worded with some variation of "We
-        regret we cannot attend...".
-    </p>
-    <p>
-        Prior to sending the RSVP invitation, the host may mail out a "save the date" card to advise the date and
-        location of the celebration. This may be used when the event will be held a considerable time in the future
-        and/or in a distant location to allow for travel plans, for such events as a wedding, christening, or any other
-        important event.
-    </p>
+    <aa-invite *ngIf="(invite$ | async) as invite; else details" [guests]="guests$ | async"></aa-invite>
+    <ng-template #details>
+        <aa-invite-details></aa-invite-details>
+    </ng-template>
 </aa-content>

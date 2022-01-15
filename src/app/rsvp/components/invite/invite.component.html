@@ -1,0 +1,7 @@
+<ul *ngIf="guests">
+    <ng-container *ngFor="let guest$ of guests">
+        <li *ngIf="(guest$ | async) as guest">
+            <aa-guest [guest]="guest"></aa-guest>
+        </li>
+    </ng-container>
+</ul>
