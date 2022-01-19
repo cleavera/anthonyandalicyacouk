@@ -2,4 +2,8 @@
 
 <aa-guest-type [guestType]="guest.type"></aa-guest-type>
 
-<aa-menu [starter]="guest.starter" [main]="guest.main" [dessert]="guest.dessert"></aa-menu>
+<aa-attending-status [status]="guest.attending"></aa-attending-status>
+
+<aa-menu *ngIf="guest.attending" [starter]="guest.starter" [main]="guest.main" [dessert]="guest.dessert"></aa-menu>
+
+<a [routerLink]="getRoute()">Edit</a>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 import { ErrorMessage } from '../../constants/error-message.constant';
 import { InviteService } from '../../services/invite.service';
@@ -13,9 +13,11 @@ export class InviteDetailsComponent {
     public errorMessage: string | null;
 
     private readonly _inviteService: InviteService;
+    private readonly _changeDetectorRef: ChangeDetectorRef;
 
-    constructor(inviteService: InviteService) {
+    constructor(inviteService: InviteService, changeDetectorRef: ChangeDetectorRef) {
         this._inviteService = inviteService;
+        this._changeDetectorRef = changeDetectorRef;
 
         this.inviteNumber = null;
         this.pin = null;
@@ -33,6 +35,7 @@ export class InviteDetailsComponent {
             await this._inviteService.loadInvite(this.inviteNumber, this.pin);
         } catch (e) {
             this.errorMessage = ErrorMessage.INCORRECT_DETAILS;
+            this._changeDetectorRef.detectChanges();
         }
     }
 

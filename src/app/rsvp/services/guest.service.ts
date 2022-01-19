@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { Api } from '@skimp/client';
 import { MODEL_REGISTER, ResourceLocation } from '@skimp/core';
 import { GuestSchema, InviteSchema } from 'anthony-and-alicya-domain';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { API_TOKEN } from '../providers/api/api.token';
 import { InviteService } from './invite.service';
@@ -12,7 +12,7 @@ export class GuestService {
     public readonly guests$: Observable<Array<Observable<GuestSchema | null>> | null>;
 
     private readonly _api: Api;
-    private readonly _cache: Record<string, Subject<GuestSchema | null>>;
+    private readonly _cache: Record<string, BehaviorSubject<GuestSchema | null>>;
     private readonly _guestSubject: BehaviorSubject<Array<Observable<GuestSchema | null>> | null>;
     private readonly _inviteService: InviteService;
 
@@ -42,7 +42,11 @@ export class GuestService {
         this._guestSubject.next(guests);
     }
 
-    private _get(location: ResourceLocation): Subject<GuestSchema | null> {
+    public getGuest(location: ResourceLocation): Observable<GuestSchema | null> {
+        return this._get(location).asObservable();
+    }
+
+    private _get(location: ResourceLocation): BehaviorSubject<GuestSchema | null> {
         if (!(location.toString() in this._cache)) {
             this._cache[location.toString()] = new BehaviorSubject<GuestSchema | null>(null);
         }
