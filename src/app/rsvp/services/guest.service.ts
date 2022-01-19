@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { Api } from '@skimp/client';
+import { Api, Model } from '@skimp/client';
 import { MODEL_REGISTER, ResourceLocation } from '@skimp/core';
 import { GuestSchema, InviteSchema } from 'anthony-and-alicya-domain';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -44,6 +44,18 @@ export class GuestService {
 
     public getGuest(location: ResourceLocation): Observable<GuestSchema | null> {
         return this._get(location).asObservable();
+    }
+
+    public async save(guest: GuestSchema): Promise<void> {
+        guest = await this._api.save(guest);
+
+        const location: ResourceLocation | null = Model.getLocation(guest);
+
+        if (location === null) {
+            throw new Error(`No location for guest ${guest.name}`);
+        }
+
+        await this.load(location);
     }
 
     private _get(location: ResourceLocation): BehaviorSubject<GuestSchema | null> {

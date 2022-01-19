@@ -1,1 +1,11 @@
-{{guest.name}}
+<p>{{guest.name}}</p>
+
+<form (submit)="onSubmit($event)">
+    <aa-input-options label="Will you be attending?" [value]="guest.attending" [options]="attendingOptions" (valueChange)="onAttendingChange($event)"></aa-input-options>
+    <aa-input-options label="Starter" [value]="guest.starter" [options]="starterOptions" (valueChange)="onStarterChange($event)"></aa-input-options>
+    <aa-input-options label="Main" [value]="guest.main" [options]="mainOptions" (valueChange)="onMainChange($event)"></aa-input-options>
+    <aa-input-options label="Dessert" [value]="guest.dessert" [options]="dessertOptions" (valueChange)="onDessertChange($event)"></aa-input-options>
+
+    <button type="submit">Save</button>
+</form>
+

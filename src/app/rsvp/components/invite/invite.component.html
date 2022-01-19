@@ -1,7 +1,9 @@
-<ul *ngIf="guests">
+<ul *ngIf="guests && !editing">
     <ng-container *ngFor="let guest$ of guests">
         <li *ngIf="(guest$ | async) as guest">
-            <aa-guest [guest]="guest"></aa-guest>
+            <aa-guest [guest]="guest" (edit)="onEdit(guest)"></aa-guest>
         </li>
     </ng-container>
 </ul>
+
+<aa-manage-guest [guest]="editing" (save)="onFinishEditing()" *ngIf="editing"></aa-manage-guest>

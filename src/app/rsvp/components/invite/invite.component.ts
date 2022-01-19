@@ -9,4 +9,14 @@ import { Observable } from 'rxjs';
 export class InviteComponent {
     @Input()
     public guests!: Array<Observable<GuestSchema | null>> | null;
+
+    public editing: GuestSchema | null = null;
+
+    public onEdit(guest: GuestSchema): void {
+        this.editing = guest;
+    }
+
+    public onFinishEditing(): void {
+        this.editing = null;
+    }
 }

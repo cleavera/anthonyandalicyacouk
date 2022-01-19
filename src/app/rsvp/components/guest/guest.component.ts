@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { MODEL_REGISTER, ResourceLocation } from '@skimp/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { GuestSchema } from 'anthony-and-alicya-domain';
 
 @Component({
@@ -10,16 +9,10 @@ export class GuestComponent {
     @Input()
     public guest!: GuestSchema;
 
-    public getRoute(): Array<string> | null {
-        const location: ResourceLocation | null = MODEL_REGISTER.getLocation(this.guest);
+    @Output()
+    public edit: EventEmitter<void> = new EventEmitter<void>();
 
-        if (location === null) {
-            return null;
-        }
-
-        return [
-            'edit',
-            location.toString()
-        ];
+    public onEdit(): void {
+        this.edit.emit();
     }
 }

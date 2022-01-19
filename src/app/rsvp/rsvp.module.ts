@@ -6,9 +6,9 @@ import { MediaModule } from '../media/media.module';
 import { AttendingStatusComponent } from './components/attending-status/attending-status.component';
 import { GuestTypeComponent } from './components/guest-type/guest-type.component';
 import { GuestComponent } from './components/guest/guest.component';
+import { InputOptionsComponent } from './components/input-options/input-options.component';
 import { InviteDetailsComponent } from './components/invite-details/invite-details.component';
 import { InviteComponent } from './components/invite/invite.component';
-import { ManageGuestPageComponent } from './components/manage-guest-page/manage-guest-page.component';
 import { ManageGuestComponent } from './components/manage-guest/manage-guest.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { RsvpPageComponent } from './components/rsvp-page/rsvp-page.component';
@@ -24,10 +24,10 @@ import { InviteService } from './services/invite.service';
         AttendingStatusComponent,
         GuestComponent,
         GuestTypeComponent,
+        InputOptionsComponent,
         InviteComponent,
         InviteDetailsComponent,
         ManageGuestComponent,
-        ManageGuestPageComponent,
         MenuComponent,
         RsvpPageComponent,
         TranslatePipe
@@ -41,7 +41,8 @@ import { InviteService } from './services/invite.service';
     providers: [
         API_PROVIDER,
         GuestService,
-        InviteService
+        InviteService,
+        TranslatePipe
     ]
 })
 export class RsvpModule {

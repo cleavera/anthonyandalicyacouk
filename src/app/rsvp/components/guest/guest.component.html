@@ -6,4 +6,4 @@
 
 <aa-menu *ngIf="guest.attending" [starter]="guest.starter" [main]="guest.main" [dessert]="guest.dessert"></aa-menu>
 
-<a [routerLink]="getRoute()">Edit</a>
+<button (click)="onEdit()">Edit</button>
