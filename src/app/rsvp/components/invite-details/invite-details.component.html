@@ -1,15 +1,8 @@
 <form (submit)="onSubmit($event)">
     <p *ngIf="errorMessage">{{ errorMessage }}</p>
 
-    <div>
-        <label for="invite-inviteNumber">Invite number</label>
-        <input id="invite-inviteNumber" type="number" required (input)="onInviteNumberChange($event)" />
-    </div>
-
-    <div>
-        <label for="invite-pin">Invite pin</label>
-        <input id="invite-pin" type="text" required (input)="onPinChange($event)" />
-    </div>
+    <aa-input-number [required]="true" label="Invite number" (valueChange)="onInviteNumberChange($event)"></aa-input-number>
+    <aa-input-string [required]="true" label="Invite pin" (valueChange)="onPinChange($event)"></aa-input-string>
 
     <button>Get my invite</button>
 </form>

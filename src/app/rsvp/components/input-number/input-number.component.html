@@ -1,0 +1,4 @@
+<div>
+    <label [for]="getId()">{{ label }}</label>
+    <input [id]="getId()" type="number" autocomplete="true" [required]="required" (input)="onInput($event)" [value]="value" />
+</div>

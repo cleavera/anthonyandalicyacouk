@@ -39,11 +39,11 @@ export class InviteDetailsComponent {
         }
     }
 
-    public onInviteNumberChange(event: Event): void {
-        this.inviteNumber = parseInt((event.currentTarget as HTMLInputElement).value, 10);
+    public onInviteNumberChange(inviteNumber: number | null): void {
+        this.inviteNumber = inviteNumber;
     }
 
-    public onPinChange(event: Event): void {
-        this.pin = (event.currentTarget as HTMLInputElement).value;
+    public onPinChange(value: string | null): void {
+        this.pin = value;
     }
 }
