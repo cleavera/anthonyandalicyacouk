@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'aa-input-string',
+    styleUrls: ['./input-string.component.scss'],
     templateUrl: './input-string.component.html'
 })
 export class InputStringComponent implements OnInit {

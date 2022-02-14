@@ -1,0 +1,12 @@
+.input {
+  box-sizing: border-box;
+  font-family: var(--fontFamily-body);
+  font-size: var(--fontSize-title);
+  max-width: 100%;
+}
+
+:host {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}

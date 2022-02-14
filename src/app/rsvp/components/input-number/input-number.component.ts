@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'aa-input-number',
+    styleUrls: ['./input-number.component.scss'],
     templateUrl: './input-number.component.html'
 })
 export class InputNumberComponent implements OnInit {

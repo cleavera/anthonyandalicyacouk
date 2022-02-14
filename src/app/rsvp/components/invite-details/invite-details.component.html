@@ -1,8 +1,14 @@
-<form (submit)="onSubmit($event)">
-    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+<p class="description">
+    Please enter the details included in your invite to RSVP and select your menu choices, these can be updated anytime up to a month before the wedding when menu choices will be locked in place and sent off to the venue. If you have lost your invite details or for whatever reason are struggling to RSVP then please get in touch with either of us.
+</p>
 
-    <aa-input-number [required]="true" label="Invite number" (valueChange)="onInviteNumberChange($event)"></aa-input-number>
-    <aa-input-string [required]="true" label="Invite pin" (valueChange)="onPinChange($event)"></aa-input-string>
+<aa-divider></aa-divider>
 
-    <aa-save-button label="Get my invite"></aa-save-button>
+<form class="form" (submit)="onSubmit($event)">
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <aa-input-number class="inviteNumber" [required]="true" label="Invite number" (valueChange)="onInviteNumberChange($event)"></aa-input-number>
+    <aa-input-string class="pin" [required]="true" label="Invite pin" (valueChange)="onPinChange($event)"></aa-input-string>
+
+    <aa-save-button class="button" label="Get my invite"></aa-save-button>
 </form>

@@ -5,6 +5,7 @@ import { InviteService } from '../../services/invite.service';
 
 @Component({
     selector: 'aa-invite-details',
+    styleUrls: ['./invite-details.component.scss'],
     templateUrl: './invite-details.component.html'
 })
 export class InviteDetailsComponent {
