@@ -1,15 +1,15 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { DishInterface } from '../../interfaces/dish.interface';
+import { OptionInterface } from '../../../rsvp/interfaces/option.interface';
 
 @Component({
-    selector: 'aa-input-dish',
-    styleUrls: ['./input-dish.component.scss'],
-    templateUrl: './input-dish.component.html'
+    selector: 'aa-input-options',
+    styleUrls: ['./input-options.component.scss'],
+    templateUrl: './input-options.component.html'
 })
-export class InputDishComponent<T = unknown> implements OnInit {
+export class InputOptionsComponent<T = unknown> implements OnInit {
     @Input()
-    public options!: Array<DishInterface>;
+    public options!: Array<OptionInterface>;
 
     @Input()
     public value!: T;
