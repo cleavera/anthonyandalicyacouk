@@ -3,6 +3,7 @@ import { GuestSchema } from 'anthony-and-alicya-domain';
 
 @Component({
     selector: 'aa-guest',
+    styleUrls: ['./guest.component.scss'],
     templateUrl: './guest.component.html'
 })
 export class GuestComponent {

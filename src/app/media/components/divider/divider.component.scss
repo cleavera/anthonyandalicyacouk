@@ -1,0 +1,9 @@
+:host {
+  --aaLine-animation-length: 1s;
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  flex: 0 1 200px;
+}

@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { GuestSchema, Starters } from 'anthony-and-alicya-domain';
 
 @Component({
     selector: 'aa-menu',
+    styleUrls: ['./menu.component.scss'],
     templateUrl: './menu.component.html'
 })
 export class MenuComponent {

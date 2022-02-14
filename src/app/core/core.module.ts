@@ -8,7 +8,6 @@ import { LayoutModule } from '../layout/layout.module';
 import { MediaModule } from '../media/media.module';
 import { AppComponent } from './components/app/app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { LineComponent } from './components/line/line.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PageComponent } from './components/page/page.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
@@ -19,7 +18,6 @@ import { CoreRoutingModule } from './core-routing.module';
     declarations: [
         AppComponent,
         LandingPageComponent,
-        LineComponent,
         NavigationComponent,
         PageComponent,
         TopBarComponent

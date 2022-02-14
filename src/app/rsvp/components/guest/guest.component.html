@@ -6,4 +6,4 @@
 
 <aa-menu *ngIf="guest.attending" [starter]="guest.starter" [main]="guest.main" [dessert]="guest.dessert"></aa-menu>
 
-<button (click)="onEdit()">Edit</button>
+<aa-button (activate)="onEdit()" [label]="guest.attending === null ? 'Respond' : 'Change'"></aa-button>

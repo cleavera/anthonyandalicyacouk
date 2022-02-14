@@ -8,4 +8,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
+    public ngOnInit(): void {
+        document.body.style.setProperty('--aaAppRoot-overlayImage', 'url(assets/bg.jpg)');
+    }
 }

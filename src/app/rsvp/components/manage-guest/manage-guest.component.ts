@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Model } from '@skimp/client';
 import { Desserts, GuestSchema, Mains, Starters } from 'anthony-and-alicya-domain';
+import { DishLabelConstant } from '../../constants/dish-label.constant';
+import { DishInterface } from '../../interfaces/dish.interface';
 
 import { OptionInterface } from '../../interfaces/option.interface';
 import { TranslatePipe } from '../../pipes/translate.pipe';
@@ -8,6 +10,7 @@ import { GuestService } from '../../services/guest.service';
 
 @Component({
     selector: 'aa-manage-guest',
+    styleUrls: ['./manage-guest.component.scss'],
     templateUrl: './manage-guest.component.html'
 })
 export class ManageGuestComponent {
@@ -28,6 +31,9 @@ export class ManageGuestComponent {
     @Output()
     public save: EventEmitter<void> = new EventEmitter<void>();
 
+    @Output()
+    public cancel: EventEmitter<void> = new EventEmitter<void>();
+
     public attendingOptions: Array<OptionInterface> = [
         {
             value: true,
@@ -43,9 +49,9 @@ export class ManageGuestComponent {
         }
     ];
 
-    public starterOptions: Array<OptionInterface>;
-    public mainOptions: Array<OptionInterface>;
-    public dessertOptions: Array<OptionInterface>;
+    public starterOptions: Array<DishInterface>;
+    public mainOptions: Array<DishInterface>;
+    public dessertOptions: Array<DishInterface>;
 
     private readonly _translatePipe: TranslatePipe;
     private _attending: boolean | null = null;
@@ -60,48 +66,21 @@ export class ManageGuestComponent {
         this._guestService = guestService;
 
         this.starterOptions = [
-            {
-                value: Starters.PORK,
-                label: this._translatePipe.transform(Starters.PORK)
-            },
-            {
-                value: Starters.TERRINE,
-                label: this._translatePipe.transform(Starters.TERRINE)
-            },
-            {
-                value: Starters.GOATS_CHEESE,
-                label: this._translatePipe.transform(Starters.GOATS_CHEESE)
-            }
+            DishLabelConstant[Starters.PORK],
+            DishLabelConstant[Starters.TERRINE],
+            DishLabelConstant[Starters.GOATS_CHEESE]
         ];
 
         this.mainOptions = [
-            {
-                value: Mains.PORK,
-                label: this._translatePipe.transform(Mains.PORK)
-            },
-            {
-                value: Mains.CHICKEN,
-                label: this._translatePipe.transform(Mains.CHICKEN)
-            },
-            {
-                value: Mains.TAGINE,
-                label: this._translatePipe.transform(Mains.TAGINE)
-            }
+            DishLabelConstant[Mains.PORK],
+            DishLabelConstant[Mains.CHICKEN],
+            DishLabelConstant[Mains.TAGINE]
         ];
 
         this.dessertOptions = [
-            {
-                value: Desserts.FONDANT,
-                label: this._translatePipe.transform(Desserts.FONDANT)
-            },
-            {
-                value: Desserts.CREME_BRULE,
-                label: this._translatePipe.transform(Desserts.CREME_BRULE)
-            },
-            {
-                value: Desserts.STICKY_TOFFEE,
-                label: this._translatePipe.transform(Desserts.STICKY_TOFFEE)
-            }
+            DishLabelConstant[Desserts.FONDANT],
+            DishLabelConstant[Desserts.STICKY_TOFFEE],
+            DishLabelConstant[Desserts.CREME_BRULE]
         ];
     }
 
@@ -125,6 +104,10 @@ export class ManageGuestComponent {
 
     public onDessertChange(dessert: string | null): void {
         this._dessert = dessert;
+    }
+
+    public onCancel(): void {
+        this.cancel.emit();
     }
 
     private async _save(): Promise<void> {

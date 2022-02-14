@@ -1,0 +1,31 @@
+:host {
+  background: var(--color-card);
+  display: block;
+  padding: 1rem;
+}
+
+.menu {
+  align-items: center;
+  border: 1px solid var(--color-dividers);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.label {
+  font-size: var(--fontSize-label);
+  margin: 1rem 0 0;
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.starter,
+.main,
+.dessert,
+.no-selected {
+  font-family: var(--fontFamily-title);
+  margin: 0;
+}

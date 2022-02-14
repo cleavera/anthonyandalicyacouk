@@ -1,12 +1,14 @@
-<p class="label">Starter</p>
-<p class="starter" *ngIf="starter else noneSelected">{{ starter | translate }}</p>
+<div class="menu">
+    <p class="label">Starter</p>
+    <p class="starter" *ngIf="starter else noneSelected">{{ starter | translate }}</p>
 
-<p class="label">Main</p>
-<p class="main" *ngIf="main else noneSelected">{{ main | translate }}</p>
+    <p class="label">Main</p>
+    <p class="main" *ngIf="main else noneSelected">{{ main | translate }}</p>
 
-<p class="label">Dessert</p>
-<p class="dessert" *ngIf="dessert else noneSelected">{{ dessert | translate }}</p>
+    <p class="label">Dessert</p>
+    <p class="dessert" *ngIf="dessert else noneSelected">{{ dessert | translate }}</p>
 
-<ng-template #noneSelected>
-    <p class="no-starter">Not selected yet</p>
-</ng-template>
+    <ng-template #noneSelected>
+        <p class="no-selected">Not selected yet</p>
+    </ng-template>
+</div>

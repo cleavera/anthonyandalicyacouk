@@ -4,8 +4,10 @@ import { NgModule } from '@angular/core';
 import { LayoutModule } from '../layout/layout.module';
 import { MediaModule } from '../media/media.module';
 import { AttendingStatusComponent } from './components/attending-status/attending-status.component';
+import { ButtonComponent } from './components/button/button.component';
 import { GuestTypeComponent } from './components/guest-type/guest-type.component';
 import { GuestComponent } from './components/guest/guest.component';
+import { InputDishComponent } from './components/input-dish/input-dish.component';
 import { InputNumberComponent } from './components/input-number/input-number.component';
 import { InputOptionsComponent } from './components/input-options/input-options.component';
 import { InputStringComponent } from './components/input-string/input-string.component';
@@ -14,6 +16,7 @@ import { InviteComponent } from './components/invite/invite.component';
 import { ManageGuestComponent } from './components/manage-guest/manage-guest.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { RsvpPageComponent } from './components/rsvp-page/rsvp-page.component';
+import { SaveButtonComponent } from './components/save-button/save-button.component';
 import { TranslatePipe } from './pipes/translate.pipe';
 import { API_PROVIDER } from './providers/api/api.provider';
 import { RsvpRoutingModule } from './rsvp-routing.module';
@@ -24,8 +27,10 @@ import { InviteService } from './services/invite.service';
     exports: [],
     declarations: [
         AttendingStatusComponent,
+        ButtonComponent,
         GuestComponent,
         GuestTypeComponent,
+        InputDishComponent,
         InputOptionsComponent,
         InputNumberComponent,
         InputStringComponent,
@@ -34,6 +39,7 @@ import { InviteService } from './services/invite.service';
         ManageGuestComponent,
         MenuComponent,
         RsvpPageComponent,
+        SaveButtonComponent,
         TranslatePipe
     ],
     imports: [
