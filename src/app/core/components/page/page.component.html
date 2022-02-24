@@ -1,7 +1,11 @@
 <aa-top-bar></aa-top-bar>
 
 <div class="content">
-    <router-outlet></router-outlet>
+    <aa-banner></aa-banner>
+
+    <aa-content [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </aa-content>
 </div>
 
 <aa-footer></aa-footer>

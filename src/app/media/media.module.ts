@@ -23,12 +23,8 @@ import { VisibilityService } from './services/visibility.service';
         HamburgerIconComponent,
         LineComponent
     ],
-    imports: [
-        CommonModule
-    ],
-    providers: [
-        VisibilityService
-    ]
+    imports: [CommonModule],
+    providers: [VisibilityService]
 })
 export class MediaModule {
 }

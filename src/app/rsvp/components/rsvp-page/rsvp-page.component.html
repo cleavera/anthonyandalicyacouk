@@ -1,8 +1,4 @@
-<aa-banner image="assets/rsvp.jpg" title="RSVP"></aa-banner>
-
-<aa-content>
-    <aa-invite *ngIf="(invite$ | async) as invite; else details" [guests]="guests$ | async" [invite]="invite"></aa-invite>
-    <ng-template #details>
-        <aa-invite-details></aa-invite-details>
-    </ng-template>
-</aa-content>
+<aa-invite *ngIf="(invite$ | async) as invite; else details" [guests]="guests$ | async" [invite]="invite"></aa-invite>
+<ng-template #details>
+    <aa-invite-details></aa-invite-details>
+</ng-template>

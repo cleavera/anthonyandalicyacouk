@@ -91,7 +91,15 @@ input[type=number] {
 }
 
 p {
-  margin: 1em 0;
+  margin: 0;
+
+  * + & {
+    margin-top: 1em;
+  }
+
+  & + * {
+    margin-top: 1em;
+  }
 }
 
 /* stylelint-enable */
