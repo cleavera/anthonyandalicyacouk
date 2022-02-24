@@ -23,4 +23,8 @@ export class InviteService {
     public async loadInvite(inviteNumber: number, _invitePin: string): Promise<void> {
         this._inviteSubject.next(await this._api.get(InviteSchema, new ResourceLocation(SCHEMA_REGISTER.getSchemaResourceName(InviteSchema) as string, inviteNumber.toString())));
     }
+
+    public clearInvite(): void {
+        this._inviteSubject.next(null);
+    }
 }

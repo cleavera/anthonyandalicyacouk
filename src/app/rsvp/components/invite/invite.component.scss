@@ -25,3 +25,21 @@
     transform: translateY(-50%);
   }
 }
+
+.clearInvite {
+  border: none;
+  background: none;
+  color: var(--color-link);
+  font-family: inherit;
+  font-size: var(--fontSize-label);
+
+  &:hover,
+  &:focus {
+    color: var(--color-link--hover);
+  }
+}
+
+.inviteNumber {
+  align-items: center;
+  display: flex;
+}

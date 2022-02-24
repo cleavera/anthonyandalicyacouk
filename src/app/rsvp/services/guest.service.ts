@@ -69,6 +69,8 @@ export class GuestService {
     private _watchInvites(): void {
         this._inviteService.invite$.subscribe((invite: InviteSchema | null) => {
             if (invite === null) {
+                this._guestSubject.next(null);
+
                 return;
             }
 

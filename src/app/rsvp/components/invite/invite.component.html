@@ -1,6 +1,9 @@
 <div class="guests" *ngIf="guests && !editing">
     <div class="inviteDetails">
-        <p class="inviteNumber">Invite number: {{invite.inviteNumber}}</p>
+        <p class="inviteNumber">
+            Invite number: {{invite.inviteNumber}}
+            <button class="clearInvite" (click)="onClearInvite()">(Clear)</button>
+        </p>
         <p class="guestCount">{{ guests.length }} guests</p>
     </div>
 
