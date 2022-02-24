@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+
 import { ButtonComponent } from './components/button/button.component';
 import { InputDishComponent } from './components/input-dish/input-dish.component';
 import { InputNumberComponent } from './components/input-number/input-number.component';
@@ -22,6 +24,8 @@ import { SaveButtonComponent } from './components/save-button/save-button.compon
         InputOptionsComponent,
         InputStringComponent,
         SaveButtonComponent
-    ]
+    ],
+    imports: [CommonModule]
 })
-export class FormModule {}
+export class FormModule {
+}
