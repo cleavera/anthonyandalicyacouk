@@ -1,16 +1,8 @@
 :host {
   display: block;
-  margin: auto;
+  margin: 1em auto;
   max-width: 800px;
-  padding: 0 10px;
-
-  @media (min-width: 400px) {
-    padding: 0 20px;
-  }
-
-  @media (min-width: 650px) {
-    padding: 0 40px;
-  }
+  padding: 0 2em;
 
   @media (min-width: 1200px) {
     border: 2px solid var(--color-dividers);

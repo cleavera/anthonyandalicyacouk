@@ -1,5 +1,5 @@
 .guestList {
-  margin: 10px 0;
+  margin: 1em 0;
   list-style: none;
   padding: 0;
 }
@@ -7,6 +7,7 @@
 .inviteDetails {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1em;
 }
 
 .guest + .guest {
@@ -42,4 +43,9 @@
 .inviteNumber {
   align-items: center;
   display: flex;
+  margin: 0;
+}
+
+.guestCount {
+  margin: 0;
 }
