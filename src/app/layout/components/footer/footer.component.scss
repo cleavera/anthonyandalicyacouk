@@ -9,16 +9,18 @@
   padding: 10px;
   position: relative;
 
-  &::after {
+  &::before {
     background-image: var(--aaFooter-overlayImage);
+    background-size: cover;
     bottom: 0;
     content: '';
     mix-blend-mode: soft-light;
     left: 0;
+    pointer-events: none;
     position: absolute;
     right: 0;
+    user-select: none;
     top: 0;
-    background-size: cover;
   }
 }
 
