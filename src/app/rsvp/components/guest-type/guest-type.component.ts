@@ -3,6 +3,7 @@ import { GuestTypes } from 'anthony-and-alicya-domain';
 
 @Component({
     selector: 'aa-guest-type',
+    styleUrls: ['./guest-type.component.scss'],
     templateUrl: './guest-type.component.html'
 })
 export class GuestTypeComponent {

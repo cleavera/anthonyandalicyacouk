@@ -8,3 +8,20 @@
   display: flex;
   justify-content: space-between;
 }
+
+.guest + .guest {
+  margin-top: var(--fontSize-title);
+  padding-top: var(--fontSize-title);
+  position: relative;
+
+  &::before {
+    content: '---------------------';
+    color: var(--color-dividers);
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transform: translateY(-50%);
+  }
+}

@@ -1,5 +1,6 @@
 :host {
   background: var(--color-card);
+  box-sizing: border-box;
   display: block;
   padding: 1rem;
 }
@@ -27,5 +28,6 @@
 .dessert,
 .no-selected {
   font-family: var(--fontFamily-title);
+  font-size: var(--fontSize-title);
   margin: 0;
 }

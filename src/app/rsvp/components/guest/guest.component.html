@@ -1,9 +1,9 @@
 <p class="name">{{ guest.name }}</p>
 
-<aa-guest-type [guestType]="guest.type"></aa-guest-type>
+<aa-guest-type class="type" [guestType]="guest.type"></aa-guest-type>
 
-<aa-attending-status [status]="guest.attending"></aa-attending-status>
+<aa-attending-status class="status" [status]="guest.attending"></aa-attending-status>
 
-<aa-menu *ngIf="guest.attending" [starter]="guest.starter" [main]="guest.main" [dessert]="guest.dessert"></aa-menu>
+<aa-menu class="menu" *ngIf="guest.attending" [starter]="guest.starter" [main]="guest.main" [dessert]="guest.dessert"></aa-menu>
 
-<aa-button (activate)="onEdit()" [label]="guest.attending === null ? 'Respond' : 'Change'"></aa-button>
+<aa-button class="button" (activate)="onEdit()" [label]="guest.attending === null ? 'Respond' : 'Change'"></aa-button>

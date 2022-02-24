@@ -11,4 +11,9 @@
   @media (min-width: 650px) {
     padding: 0 40px;
   }
+
+  @media (min-width: 1200px) {
+    border: 2px solid var(--color-dividers);
+    border-width: 0 2px;
+  }
 }
