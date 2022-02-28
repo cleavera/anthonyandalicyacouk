@@ -1,4 +1,9 @@
-<aa-invite *ngIf="(invite$ | async) as invite; else details" [guests]="guests$ | async" [invite]="invite"></aa-invite>
+<div #scrollTarget role="presentation"></div>
+<aa-invite
+        *ngIf="(invite$ | async) as invite; else details" [guests]="guests$ | async"
+        [invite]="invite"
+        (aaScrollTop)="onScrollTop()"
+        (clearInvite)="onClearInvite()"></aa-invite>
 <ng-template #details>
     <aa-invite-details></aa-invite-details>
 </ng-template>
