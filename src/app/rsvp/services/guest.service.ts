@@ -4,6 +4,7 @@ import { MODEL_REGISTER, ResourceLocation } from '@skimp/core';
 import { GuestSchema, InviteSchema } from 'anthony-and-alicya-domain';
 import { BehaviorSubject, Observable } from 'rxjs';
 
+import { Loading } from '../decorators/loading.decorator';
 import { API_TOKEN } from '../providers/api/api.token';
 import { InviteService } from './invite.service';
 
@@ -26,10 +27,12 @@ export class GuestService {
         this._watchInvites();
     }
 
+    @Loading
     public async load(location: ResourceLocation): Promise<void> {
         this._get(location).next(await this._api.get(GuestSchema, location));
     }
 
+    @Loading
     public async loadGuests(guestLocations: Array<ResourceLocation>): Promise<void> {
         const guests: Array<Observable<GuestSchema | null>> = guestLocations.map((guestLocation: ResourceLocation) => {
             return this._get(guestLocation);

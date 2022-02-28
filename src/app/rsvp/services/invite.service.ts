@@ -5,6 +5,7 @@ import { SCHEMA_REGISTER } from '@skimp/schema';
 import { InviteSchema } from 'anthony-and-alicya-domain';
 import { BehaviorSubject, Observable } from 'rxjs';
 
+import { Loading } from '../decorators/loading.decorator';
 import { API_TOKEN } from '../providers/api/api.token';
 
 @Injectable()
@@ -20,6 +21,7 @@ export class InviteService {
         this.invite$ = this._inviteSubject.asObservable();
     }
 
+    @Loading
     public async loadInvite(inviteNumber: number, _invitePin: string): Promise<void> {
         this._inviteSubject.next(await this._api.get(InviteSchema, new ResourceLocation(SCHEMA_REGISTER.getSchemaResourceName(InviteSchema) as string, inviteNumber.toString())));
     }

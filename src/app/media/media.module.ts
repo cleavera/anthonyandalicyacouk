@@ -7,6 +7,7 @@ import { CloseIconComponent } from './components/close-icon/close-icon.component
 import { DividerComponent } from './components/divider/divider.component';
 import { HamburgerIconComponent } from './components/hamburger-icon/hamburger-icon.component';
 import { LineComponent } from './components/line/line.component';
+import { LoadingComponent } from './components/loading/loading.component';
 import { VisibilityService } from './services/visibility.service';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { VisibilityService } from './services/visibility.service';
         CloseIconComponent,
         DividerComponent,
         HamburgerIconComponent,
-        LineComponent
+        LineComponent,
+        LoadingComponent
     ],
     declarations: [
         BannerComponent,
@@ -23,7 +25,8 @@ import { VisibilityService } from './services/visibility.service';
         CloseIconComponent,
         DividerComponent,
         HamburgerIconComponent,
-        LineComponent
+        LineComponent,
+        LoadingComponent
     ],
     imports: [CommonModule],
     providers: [VisibilityService]
