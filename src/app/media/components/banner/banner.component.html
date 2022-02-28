@@ -1,3 +1,4 @@
-<div class="container">
-    <h2 class="title" [innerText]="title ?? ''"></h2>
+<div [@fadeAnimation]="title || title2">
+    <aa-banner-image class="image" [title]="title" [image]="image" *ngIf="title"></aa-banner-image>
+    <aa-banner-image class="image" [title]="title2" [image]="image2" *ngIf="title2"></aa-banner-image>
 </div>

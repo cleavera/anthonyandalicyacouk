@@ -1,0 +1,47 @@
+:host {
+  align-items: center;
+  background-image: var(--aaBannerImage-image);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    background: var(--color-overlay);
+    bottom: 0;
+    content: '';
+    mix-blend-mode: hard-light;
+    left: 0;
+    opacity: .9;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &::after {
+    background-image: var(--aaBanner-overlayImage);
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    mix-blend-mode: soft-light;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+.title {
+  color: var(--color-font-title--invert);
+  font-family: var(--fontFamily-title);
+  font-size: 3rem;
+  position: relative;
+  text-align: center;
+  z-index: 100;
+
+  @media (min-width: 650px) {
+    font-size: 4rem;
+  }
+}

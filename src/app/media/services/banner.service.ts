@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, distinct, Observable } from 'rxjs';
 
 import { BannerInterface } from '../interfaces/banner.interface';
 
@@ -11,7 +11,7 @@ export class BannerService {
 
     constructor() {
         this._bannerSubject = new BehaviorSubject<BannerInterface | null>(null);
-        this.banner$ = this._bannerSubject.asObservable();
+        this.banner$ = this._bannerSubject.pipe(distinct());
     }
 
     public setBanner(title: string, image: string): void {

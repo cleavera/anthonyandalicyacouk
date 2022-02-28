@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { BannerImageComponent } from './components/banner-image/banner-image.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { CloseIconComponent } from './components/close-icon/close-icon.component';
 import { DividerComponent } from './components/divider/divider.component';
@@ -18,6 +19,7 @@ import { VisibilityService } from './services/visibility.service';
     ],
     declarations: [
         BannerComponent,
+        BannerImageComponent,
         CloseIconComponent,
         DividerComponent,
         HamburgerIconComponent,
