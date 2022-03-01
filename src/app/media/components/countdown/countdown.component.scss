@@ -1,0 +1,18 @@
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fontFamily-title);
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.daysLeft {
+  font-size: 10rem;
+  font-weight: lighter;
+  line-height: 0.7;
+}
+
+.label {
+  font-size: var(--fontSize-title);
+}
