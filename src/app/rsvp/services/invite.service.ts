@@ -22,7 +22,9 @@ export class InviteService {
     }
 
     @Loading
-    public async loadInvite(inviteNumber: number, _invitePin: string): Promise<void> {
+    public async loadInvite(inviteNumber: number, invitePin: string): Promise<void> {
+        this._api.setAuthorisationHeader(`PIN: ${invitePin}`);
+
         this._inviteSubject.next(await this._api.get(InviteSchema, new ResourceLocation(SCHEMA_REGISTER.getSchemaResourceName(InviteSchema) as string, inviteNumber.toString())));
     }
 
