@@ -2,17 +2,25 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: var(--fontFamily-title);
   justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
   padding: 4rem 0;
 }
 
 .daysLeft {
-  font-size: 10rem;
-  font-weight: 400;
-  line-height: .7;
+  font-family: var(--fontFamily-title);
+  font-size: 32px;
+  fill: var(--color-font-title);
 }
 
 .label {
-  font-size: var(--fontSize-title);
+  font-family: var(--fontFamily-title);
+  font-size: 12px;
+  fill: var(--color-font-title);
+}
+
+.wreath {
+  fill: var(--color-dividers);
+  stroke-width: .08;
 }
