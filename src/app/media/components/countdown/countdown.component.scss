@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: center;
   max-width: 100%;
-  overflow: hidden;
   padding: 4rem 0;
 }
 
@@ -18,6 +17,10 @@
   font-family: var(--fontFamily-title);
   font-size: 12px;
   fill: var(--color-font-title);
+}
+
+.image {
+  max-width: 100%;
 }
 
 .wreath {
