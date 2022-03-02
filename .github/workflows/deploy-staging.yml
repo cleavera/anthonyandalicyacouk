@@ -29,7 +29,7 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az storage blob upload-batch --account-name anthonyandalicyacouk -d 'staging' -s ./dist
+            az storage blob upload-batch --account-name anthonyandalicyacouk -d 'staging' -s ./dist --subscription 222fe2da-47fa-4647-ac0b-4ff1c595c87a
       - name: logout
         run: |
           az logout
