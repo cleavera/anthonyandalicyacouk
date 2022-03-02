@@ -1,10 +1,12 @@
 <div #scrollTarget role="presentation"></div>
-<aa-invite
-        *ngIf="(invite$ | async) as invite; else details" [guests]="guests$ | async"
-        [invite]="invite"
-        (aaScrollTop)="onScrollTop()"
-        (clearInvite)="onClearInvite()"></aa-invite>
-<ng-template #details>
-    <aa-invite-details></aa-invite-details>
+<aa-loading *ngIf="isLoading | async; else content"></aa-loading>
+<ng-template #content>
+    <aa-invite
+            *ngIf="(invite$ | async) as invite; else details" [guests]="guests$ | async"
+            [invite]="invite"
+            (aaScrollTop)="onScrollTop()"
+            (clearInvite)="onClearInvite()"></aa-invite>
+    <ng-template #details>
+        <aa-invite-details></aa-invite-details>
+    </ng-template>
 </ng-template>
-<aa-loading *ngIf="isLoading | async"></aa-loading>
