@@ -3,7 +3,7 @@ import { LOADING_SERVICE } from '../providers/loading-service/loading-service.co
 export const Loading: MethodDecorator = (target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor): void => { // eslint-disable-line @typescript-eslint/no-explicit-any
     const originalFunc: Function = target[propertyKey];
 
-    descriptor.value = async function(...args: Array<any>) {
+    descriptor.value = async function LoadingDecorator(...args: Array<unknown>): Promise<unknown> {
         const returnValue: Promise<unknown> = originalFunc.apply(this, args);
 
         LOADING_SERVICE.addPromise(returnValue);

@@ -6,7 +6,7 @@
   padding: 0;
   width: 100%;
 
-  & + * {
+  & + * { /* stylelint-disable-line selector-max-universal */
     clear: both;
   }
 }

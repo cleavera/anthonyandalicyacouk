@@ -48,4 +48,4 @@ export const DishLabelConstant: Record<string, DishInterface> = {
         label: 'Cremé brulee',
         description: 'Vanilla cremé brulee served with a seasonal compote'
     }
-}
+};

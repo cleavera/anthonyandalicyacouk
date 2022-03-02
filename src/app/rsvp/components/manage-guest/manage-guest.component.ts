@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Model } from '@skimp/client';
 import { Desserts, GuestSchema, Mains, Starters } from 'anthony-and-alicya-domain';
+
 import { DishLabelConstant } from '../../constants/dish-label.constant';
 import { DishInterface } from '../../interfaces/dish.interface';
-
 import { OptionInterface } from '../../interfaces/option.interface';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { GuestService } from '../../services/guest.service';

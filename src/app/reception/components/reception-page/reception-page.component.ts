@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { BannerService } from '../../../media/services/banner.service';
 
 @Component({

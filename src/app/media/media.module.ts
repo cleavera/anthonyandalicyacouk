@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+
 import { AddressComponent } from './components/address/address.component';
 import { BannerImageComponent } from './components/banner-image/banner-image.component';
 import { BannerComponent } from './components/banner/banner.component';

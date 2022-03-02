@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
     selector: 'aa-address',
@@ -18,6 +18,5 @@ export class AddressComponent {
 
     constructor(domSanitizer: DomSanitizer) {
         this._domSanitizer = domSanitizer;
-
     }
 }

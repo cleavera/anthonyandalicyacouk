@@ -17,7 +17,7 @@ export class TranslatePipe implements PipeTransform {
         [Desserts.FONDANT]: 'Warm chocolate fondant, pistachio ice cream',
         [Desserts.STICKY_TOFFEE]: 'Sticky toffee pudding with butterscotch sauce and vanilla ice cream',
         [Desserts.CREME_BRULE]: 'Vanilla cremé brulee, seasonal compote'
-    }
+    };
 
     public transform(value: string): string {
         return this.map[value] ?? value;

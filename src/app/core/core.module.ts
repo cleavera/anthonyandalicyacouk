@@ -1,6 +1,7 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// eslint-disable-next-line import/no-internal-modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { APP_BASE_PATH } from '../../environments/environment';

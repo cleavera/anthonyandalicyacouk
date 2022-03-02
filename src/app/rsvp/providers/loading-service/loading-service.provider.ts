@@ -1,4 +1,5 @@
 import { Provider } from '@angular/core';
+
 import { LoadingService } from '../../services/loading.service';
 import { LOADING_SERVICE } from './loading-service.constant';
 
