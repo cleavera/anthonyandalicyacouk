@@ -14,6 +14,6 @@ export class LandingPageComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        this._bannerService.setBanner('Anthony & Alicya', 'assets/home.jpg');
+        this._bannerService.setBanner('Our wedding', 'assets/home.jpg');
     }
 }

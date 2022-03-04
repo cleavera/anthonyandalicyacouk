@@ -14,9 +14,13 @@
 
 .address {
   cursor: pointer;
-  display: flex;
+  list-style: none;
   padding-right: 45px;
   position: relative;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
 }
 
 .mapIcon {
