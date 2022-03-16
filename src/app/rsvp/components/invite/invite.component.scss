@@ -1,0 +1,51 @@
+.guestList {
+  margin: 1em 0;
+  list-style: none;
+  padding: 0;
+}
+
+.inviteDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.guest + .guest {
+  margin-top: var(--fontSize-title);
+  padding-top: var(--fontSize-title);
+  position: relative;
+
+  &::before {
+    content: '---------------------';
+    color: var(--color-dividers);
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.clearInvite {
+  border: none;
+  background: none;
+  color: var(--color-link);
+  font-family: inherit;
+  font-size: var(--fontSize-label);
+
+  &:hover,
+  &:focus {
+    color: var(--color-link--hover);
+  }
+}
+
+.inviteNumber {
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+
+.guestCount {
+  margin: 0;
+}

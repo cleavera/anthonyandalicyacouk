@@ -1,0 +1,19 @@
+:host {
+  --aaButton-color-border: var(--aaButton-color, var(--color-grey));
+  display: block;
+  padding: 5px;
+}
+
+.button {
+  background: var(--aaButton-color, var(--color-grey));
+  border: 2px solid var(--color-background);
+  font-family: var(--fontFamily-body);
+  padding: 10px 20px;
+  outline: 5px solid var(--aaButton-color-border);
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    --aaButton-color-border: var(--aaButton-color--hover, var(--color-link--hover));
+  }
+}

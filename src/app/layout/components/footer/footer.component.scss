@@ -1,0 +1,35 @@
+:host {
+  align-items: center;
+  background: var(--color-overlay);
+  color: var(--color-font-title--invert);
+  display: flex;
+  font-size: var(--fontSize-body);
+  justify-content: center;
+  margin-top: var(--fontSize-title);
+  padding: 10px;
+  position: relative;
+
+  &::before {
+    background-image: var(--aaFooter-overlayImage);
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    mix-blend-mode: soft-light;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    user-select: none;
+    top: 0;
+  }
+}
+
+.date {
+  margin: 0 var(--fontSize-title);
+}
+
+.name {
+  font-family: var(--fontFamily-title);
+  font-size: var(--fontSize-title);
+  margin: 0;
+}

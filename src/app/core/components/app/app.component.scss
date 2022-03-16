@@ -1,0 +1,105 @@
+/* stylelint-disable */
+
+:root {
+  --fontFamily-body: poppins, sans-serif;
+  --fontFamily-title: 'Clicker Script', serif;
+
+  --fontSize-body: 1rem;
+  --fontSize-label: 0.8rem;
+  --fontSize-title: 1.6rem;
+
+  --color-black: #000000;
+  --color-burgundy: #5e1727;
+  --color-duskyPink: #ca8e99;
+  --color-lightPink: #efdce0;
+  --color-mintGreen: #adb8ae;
+  --color-grey: #cccccc;
+  --color-white: #fdfdfd;
+  --color-whiteIvory: #f0f0f0;
+
+  --color-background: var(--color-whiteIvory);
+  --color-button: var(--color-grey);
+  --color-card: var(--color-white);
+  --color-dividers: var(--color-mintGreen);
+  --color-focus: var(--color-mintGreen);
+  --color-selected: var(--color-lightPink);
+  --color-font-title: var(--color-burgundy);
+  --color-font-title--invert: var(--color-white);
+  --color-link: var(--color-burgundy);
+  --color-link--hover: var(--color-duskyPink);
+  --color-overlay: var(--color-burgundy);
+  --color-positive: var(--color-mintGreen);
+  --color-negative: var(--color-duskyPink);
+  --color-shadow: var(--color-burgundy);
+
+  --aaLine-animation-length: 2s;
+
+  font-size: 100%;
+
+  @media (min-width: 650px) {
+    --fontSize-body: 1.3rem;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--fontFamily-body);
+  font-size: var(--fontSize-body);
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    background-image: var(--aaAppRoot-overlayImage);
+    bottom: 0;
+    content: '';
+    mix-blend-mode: soft-light;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  border-bottom: 1px solid;
+  color: var(--color-link);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-link--hover);
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+p {
+  margin: 0;
+
+  * + & {
+    margin-top: 1em;
+  }
+
+  & + * {
+    margin-top: 1em;
+  }
+}
+
+/* stylelint-enable */

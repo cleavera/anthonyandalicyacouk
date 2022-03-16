@@ -1,0 +1,19 @@
+:host {
+  background: var(--color-overlay);
+  display: block;
+  height: 400px;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 650px) {
+    height: 600px;
+  }
+}
+
+.image {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

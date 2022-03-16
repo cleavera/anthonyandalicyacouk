@@ -1,0 +1,29 @@
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  padding: 4rem 0;
+}
+
+.daysLeft {
+  font-family: var(--fontFamily-title);
+  font-size: 32px;
+  fill: var(--color-font-title);
+}
+
+.label {
+  font-family: var(--fontFamily-title);
+  font-size: 12px;
+  fill: var(--color-font-title);
+}
+
+.image {
+  max-width: 100%;
+}
+
+.wreath {
+  fill: var(--color-dividers);
+  stroke-width: .08;
+}

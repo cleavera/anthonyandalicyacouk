@@ -1,0 +1,10 @@
+<p class="label">Response:</p>
+<p class="attending" *ngIf="status === true; else notAttending">Attending</p>
+
+<ng-template #notAttending>
+    <p class="notAttending" *ngIf="status === false; else notAnswered">Not attending</p>
+</ng-template>
+
+<ng-template #notAnswered>
+    <p class="notAnswered">Not answered</p>
+</ng-template>

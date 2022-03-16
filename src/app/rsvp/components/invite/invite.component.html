@@ -1,0 +1,21 @@
+<div class="guests" *ngIf="guests && !editing">
+    <div class="inviteDetails">
+        <p class="inviteNumber">
+            Invite number: {{invite.inviteNumber}}
+            <button class="clearInvite" (click)="onClearInvite()">(Clear)</button>
+        </p>
+        <p class="guestCount">{{ guests.length }} guests</p>
+    </div>
+
+    <aa-divider></aa-divider>
+
+    <ul class="guestList">
+        <ng-container *ngFor="let guest$ of guests">
+            <li class="guest" *ngIf="(guest$ | async) as guest">
+                <aa-guest [guest]="guest" (edit)="onEdit(guest)"></aa-guest>
+            </li>
+        </ng-container>
+    </ul>
+</div>
+
+<aa-manage-guest [guest]="editing" (save)="onFinishEditing()" (cancel)="onFinishEditing()" *ngIf="editing"></aa-manage-guest>

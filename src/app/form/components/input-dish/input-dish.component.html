@@ -1,0 +1,11 @@
+<fieldset class="course">
+    <legend class="course-name">{{label}}</legend>
+
+    <div class="option" *ngFor="let option of options; let i = index;">
+        <input type="radio" [id]="getId(i)" [name]="getName()" [value]="i" class="input" [checked]="option.value === value" (input)="onInput($event)">
+        <label [for]="getId(i)" class="label">
+            <span class="dish-name">{{option.label}}</span>
+            <span class="dish-description">{{option.description}}</span>
+        </label>
+    </div>
+</fieldset>

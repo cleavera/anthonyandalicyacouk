@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.name {
+  flex: 1 0 100%;
+  font-size: var(--fontSize-title);
+  font-family: var(--fontFamily-title);
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.menu {
+  flex: 1 0 100%;
+  margin-top: 10px;
+}
+
+.button {
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.status {
+  flex: 1 0 50%;
+}
+
+.type {
+  flex: 1 0 50%;
+}

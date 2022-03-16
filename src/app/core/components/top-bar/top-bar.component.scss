@@ -1,0 +1,93 @@
+:host {
+  background: var(--color-card);
+  box-shadow: 0 5px 10px var(--color-shadow);
+  display: flex;
+  padding: 10px 0;
+
+  @media screen and (min-width: 650px) {
+    flex-direction: column;
+    padding: 50px 0 30px;
+  }
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  margin: 0 20px;
+
+  @media screen and (max-width: 650px) {
+    flex: 0 1 100%;
+  }
+
+  @media screen and (min-width: 650px) {
+    justify-content: center;
+  }
+}
+
+.title {
+  color: var(--color-font-title);
+  font-family: var(--fontFamily-title);
+  font-size: 1.5rem;
+  flex: 0 0 auto;
+  margin: 0 20px 0 0;
+
+  @media screen and (min-width: 400px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 550px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 650px) {
+    margin: 20px 20px 30px;
+  }
+
+  @media screen and (min-width: 850px) {
+    font-size: 5rem;
+  }
+}
+
+.line {
+  flex: 0 1 100px;
+  margin: 0;
+
+  @media screen and (min-width: 450px) {
+    flex: 0 1 250px;
+    min-width: 150px;
+  }
+
+  &:first-of-type {
+    display: none;
+
+    @media screen and (min-width: 650px) {
+      display: block;
+    }
+  }
+}
+
+.toggle {
+  --hamburgerIcon-color: var(--color-link);
+  background: none;
+  border: 0;
+  margin: 0 5px;
+  width: 30px;
+
+  @media screen and (min-width: 400px) {
+    margin: 0 10px;
+    width: 35px;
+  }
+
+  @media screen and (min-width: 550px) {
+    width: 40px;
+  }
+
+  @media screen and (min-width: 650px) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    --hamburgerIcon-color: var(--color-link--hover);
+  }
+}
