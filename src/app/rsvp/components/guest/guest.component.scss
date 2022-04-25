@@ -1,8 +1,3 @@
-:host {
-  display: flex;
-  flex-flow: row wrap;
-}
-
 .name {
   flex: 1 0 100%;
   font-size: var(--fontSize-title);
@@ -27,4 +22,9 @@
 
 .type {
   flex: 1 0 50%;
+}
+
+.guest-details {
+  display: flex;
+  flex-flow: row wrap;
 }

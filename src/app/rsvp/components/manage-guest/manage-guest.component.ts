@@ -26,6 +26,8 @@ export class ManageGuestComponent {
         this._starter = guest.starter;
         this._main = guest.main;
         this._dessert = guest.dessert;
+
+        this._dietaryRequirements = guest.comments;
     }
 
     @Output()
@@ -58,6 +60,7 @@ export class ManageGuestComponent {
     private _starter: string | null = null;
     private _main: string | null = null;
     private _dessert: string | null = null;
+    private _dietaryRequirements: string | null = null;
     private _guest!: GuestSchema;
     private readonly _guestService: GuestService;
 
@@ -106,6 +109,10 @@ export class ManageGuestComponent {
         this._dessert = dessert;
     }
 
+    public onDietaryRequirementsChange(dietaryRequirement: string | null): void {
+        this._dietaryRequirements = dietaryRequirement;
+    }
+
     public onCancel(): void {
         this.cancel.emit();
     }
@@ -117,6 +124,7 @@ export class ManageGuestComponent {
         cloned.starter = this._starter;
         cloned.main = this._main;
         cloned.dessert = this._dessert;
+        cloned.comments = this._dietaryRequirements;
 
         await this._guestService.save(cloned);
 

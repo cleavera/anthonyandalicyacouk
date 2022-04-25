@@ -1,0 +1,21 @@
+.input {
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--color-dividers);
+  font-family: var(--fontFamily-body);
+  font-size: var(--fontSize-title);
+  max-width: 100%;
+  padding: .2em;
+  width: 100%;
+}
+
+.input:focus-visible {
+  outline: 4px solid var(--color-focus);
+}
+
+:host {
+  align-items: flex-start;
+  background: var(--color-card);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
