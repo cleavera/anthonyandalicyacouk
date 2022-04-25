@@ -1,0 +1,2 @@
+<label class="label" [for]="getId()">{{ label }}</label>
+<div class="input" [id]="getId()" [attr.aria-required]="required" (input)="onInput($event)" contenteditable>{{value ?? ''}}</div>

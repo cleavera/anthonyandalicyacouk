@@ -10,6 +10,8 @@
         <aa-input-dish class="course" label="Dessert" [value]="guest.dessert" [options]="dessertOptions" (valueChange)="onDessertChange($event)"></aa-input-dish>
     </div>
 
+    <aa-input-text class="dietary" label="Dietary requirements" [value]="guest.comments" (valueChange)="onDietaryRequirementsChange($event)"></aa-input-text>
+
     <div class="actions">
         <aa-button class="cancel-action" (activate)="onCancel()" label="Cancel"></aa-button>
         <aa-save-button class="save-action"></aa-save-button>
