@@ -61,6 +61,7 @@ export class ManageGuestComponent {
     private _main: string | null = null;
     private _dessert: string | null = null;
     private _dietaryRequirements: string | null = null;
+  
     private _guest!: GuestSchema;
     private readonly _guestService: GuestService;
 
