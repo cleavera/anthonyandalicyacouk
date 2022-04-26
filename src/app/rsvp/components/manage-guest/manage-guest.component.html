@@ -9,6 +9,8 @@
         <aa-input-dish class="course" label="Main" [value]="guest.main" [options]="mainOptions" (valueChange)="onMainChange($event)"></aa-input-dish>
         <aa-input-dish class="course" label="Dessert" [value]="guest.dessert" [options]="dessertOptions" (valueChange)="onDessertChange($event)"></aa-input-dish>
     </div>
+  
+    <aa-input-text class="dietary" label="Dietary requirements" [value]="guest.comments" (valueChange)="onDietaryRequirementsChange($event)"></aa-input-text>
 
     <aa-input-text class="dietary" label="Dietary requirements" [value]="guest.comments" (valueChange)="onDietaryRequirementsChange($event)"></aa-input-text>
 
