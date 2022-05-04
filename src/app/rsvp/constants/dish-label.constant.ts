@@ -29,7 +29,7 @@ export const DishLabelConstant: Record<string, DishInterface> = {
         description: 'Roast breast of chicken served with dauphinoise potatoes, green beans and a mushroom fricassee'
     },
     [Mains.TAGINE]: {
-        value: Mains.CHICKEN,
+        value: Mains.TAGINE,
         label: 'Moroccan vegetable and apricot tagine',
         description: 'Moroccan vegetable and apricot tagine served with pine nut and raisin cous-cous raita and flatbread'
     },
