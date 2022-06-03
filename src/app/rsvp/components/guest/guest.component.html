@@ -5,6 +5,6 @@
     <aa-attending-status class="status" [status]="guest.attending"></aa-attending-status>
 </div>
 
-<aa-menu class="menu" *ngIf="guest.attending" [starter]="guest.starter" [main]="guest.main" [dessert]="guest.dessert"></aa-menu>
+<aa-menu class="menu" *ngIf="guest.attending && (guest | isDayGuest)" [starter]="guest.starter" [main]="guest.main" [dessert]="guest.dessert"></aa-menu>
 
 <aa-button class="button" (activate)="onEdit()" [label]="guest.attending === null ? 'Respond' : 'Change'"></aa-button>

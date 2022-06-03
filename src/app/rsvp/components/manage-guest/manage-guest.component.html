@@ -3,13 +3,15 @@
 <form (submit)="onSubmit($event)">
     <aa-input-options label="Will you be attending?" [value]="guest.attending" [options]="attendingOptions" (valueChange)="onAttendingChange($event)"></aa-input-options>
 
-    <p class="menu-title">Please select your menu choices</p>
-    <div class="menu">
-        <aa-input-dish class="course" label="Starter" [value]="guest.starter" [options]="starterOptions" (valueChange)="onStarterChange($event)"></aa-input-dish>
-        <aa-input-dish class="course" label="Main" [value]="guest.main" [options]="mainOptions" (valueChange)="onMainChange($event)"></aa-input-dish>
-        <aa-input-dish class="course" label="Dessert" [value]="guest.dessert" [options]="dessertOptions" (valueChange)="onDessertChange($event)"></aa-input-dish>
-    </div>
-  
+    <ng-container *ngIf="guest | isDayGuest">
+        <p class="menu-title">Please select your menu choices</p>
+        <div class="menu">
+            <aa-input-dish class="course" label="Starter" [value]="guest.starter" [options]="starterOptions" (valueChange)="onStarterChange($event)"></aa-input-dish>
+            <aa-input-dish class="course" label="Main" [value]="guest.main" [options]="mainOptions" (valueChange)="onMainChange($event)"></aa-input-dish>
+            <aa-input-dish class="course" label="Dessert" [value]="guest.dessert" [options]="dessertOptions" (valueChange)="onDessertChange($event)"></aa-input-dish>
+        </div>
+    </ng-container>
+
     <aa-input-text class="dietary" label="Dietary requirements" [value]="guest.comments" (valueChange)="onDietaryRequirementsChange($event)"></aa-input-text>
 
     <aa-input-text class="dietary" label="Dietary requirements" [value]="guest.comments" (valueChange)="onDietaryRequirementsChange($event)"></aa-input-text>

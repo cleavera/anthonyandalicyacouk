@@ -12,6 +12,7 @@ import { InviteComponent } from './components/invite/invite.component';
 import { ManageGuestComponent } from './components/manage-guest/manage-guest.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { RsvpPageComponent } from './components/rsvp-page/rsvp-page.component';
+import { IsDayGuestPipe } from './pipes/is-day-guest.pipe';
 import { TranslatePipe } from './pipes/translate.pipe';
 import { API_PROVIDER } from './providers/api/api.provider';
 import { LOADING_SERVICE_PROVIDER } from './providers/loading-service/loading-service.provider';
@@ -27,6 +28,7 @@ import { InviteService } from './services/invite.service';
         GuestTypeComponent,
         InviteComponent,
         InviteDetailsComponent,
+        IsDayGuestPipe,
         ManageGuestComponent,
         MenuComponent,
         RsvpPageComponent,
